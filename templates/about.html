@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info LR Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about-style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Linear Regression About</h1>
+    <nav>
+      <ul>
+        <li><a href="/home">Inicio</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="contact-header">Contact Information</h2>
+    </section>
+    <div class="partners-container">
+      <div class="left-sections">
+        <section class="partners-sections">
+          <h2>Teammates in the Original project:</h2><br>
+          <h3>Luis Arturo Michel Pérez</h3>
+          <p>2209116@upy.edu.mx</p>
+          <p>+52 921 200 2141</p>
+        </section><br>
+        <section class="partners-sections">
+          <h3>Gerardo Hernández Widman</h3>
+          <p>2209090@upy.edu.mx</p>
+          <p>+52 1 55 5555 5557</p>
+        </section><br>
+        <section class="partners-sections">
+          <h3>Oscar Martínez Estevez</h3>
+          <p>2109098@upy.edu.mx</p>
+          <p>+52 1 55 5555 5558</p>
+        </section><br>
+        <section class="partners-sections">
+          <h3>Moisés Jesús Carrillo Alonzo</h3>
+          <p>2209041@upy.edu.mx</p>
+          <p>+52 999 573 7053</p>
+        </section>
+      </div>
+      <section id="my-info">
+        <h2>Reinvention of the project by:</h2><br>
+        <h3>Mario David Hernández Pantoja</h3>
+        <p>mdavidhernandezp@gmail.com</p>
+        <p>+52 999 549 9926</p>
+        <div class="images">
+          <div class="image-item">
+            <img src="{{ url_for('static', filename='images/david.jpg') }}" alt="Image 2">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Mario David Hernández Pantoja WEB &copy; 2024</p>
+  </footer>
+</body>
+</html>

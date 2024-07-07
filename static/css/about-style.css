@@ -1,0 +1,147 @@
+/* Basic Structure of the HTML. */
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin: 100px;
+  margin-bottom: 0px;
+  border-radius: 15px;
+}
+
+header h1 {
+  font-size: 3em;
+  text-align: left;
+  margin-left: 40px;
+}
+
+header nav {
+  background-color: #e9e9e9;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+header a:hover {
+  color: #fff;
+}
+/* Sections */
+main {
+  padding: 20px;
+  margin: 20px;
+  background-color: #e9e9e9;
+  border-radius: 15px;
+  margin-inline: 100px;
+}
+
+#contact-header {
+  font-size: 2em;
+  padding-left: 10%;
+}
+
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px;
+  margin-top: 20px;
+}
+
+.left-sections {
+  flex: 1 1 45%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #000;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-right: 5px;
+  color: #fff;
+}
+
+#my-info {
+  flex: 1 1 45%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.partners-sections {
+  margin-bottom: 20px;
+}
+
+.images {
+  margin-top: 10px;
+}
+
+.images img {
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Extra details */
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .partners-container {
+    flex-direction: column;
+  }
+
+  .left-sections,
+  #my-info {
+    flex: 1 1 100%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  header nav {
+    padding: 10px;
+  }
+
+  .left-sections,
+  #my-info {
+    padding: 10px;
+  }
+}

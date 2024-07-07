@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home LR Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index-style.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1>Linear Regression</h1>
+    <nav>
+      <ul>
+        <li><a href="/home">Inicio</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container-first">
+      <div class="interface-and-table">
+        <div class="upload">
+          <h2>Upload</h2>
+          <label>Select a CSV file</label>
+          <form action="/" method="post" enctype="multipart/form-data">
+            <br>
+            <input type="file" class="input-file" id="fileInput" name="csvfile" accept=".csv">
+            <br><br>
+            <input type="submit" value="upload" class="nice-buttons">
+          </form>
+        </div>
+
+        {% if data %}
+        <div class="table-container">
+          <table>
+              <label>Uploaded CSV Data</label>
+              {{ data|safe }}
+          </table>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="interface-and-table">
+        <div class="clean">
+          <h2>Clean</h2>
+          <label>Press to clean up the CSV file</label><br>
+          <form action="/" method="post"><br>
+            <button type="submit" name="clean" value="clean" class="nice-buttons">Clean</button>
+          </form>
+        </div>
+
+        {% if cleaned_data %}
+          <div class="table-container">
+            <table>
+              <label>Cleaned CSV Data</label>
+              {{ cleaned_data|safe }}
+            </table>
+          </div>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="interface-and-table">
+        <div class="train">
+          <h2>Train</h2>
+          <label>Write the columns required for the training<br>(Use the tables shown above to copy the column names).</label>
+          <form action="/" method="post"><br>
+            <input type="text" class="input-text" name="target-column" placeholder="Target Column" required><br><br>
+            <input type="text" class="input-text" name="feature-columns" placeholder="List of columns desired (e.g.,columna1,columna2)" required><br><br>
+            <button type="submit" name="train" value="train" class="nice-buttons">Train</button>
+          </form>
+        </div>
+
+        {% if training_success %}
+          <div class="training-success-container">
+            <h2>Training Completed</h2>
+            <p>The model has been successfully trained! The Prediction Coefficients:</p>
+            <ul class="coefficients-list">
+              {% for feature, coef in coef_dict.items() %}
+              <li><strong>{{ feature }}:</strong> {{ coef }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="interface-and-table">
+        <div class="predict">
+          <h2>Predict</h2>
+          <label>Press to complete the prediction</label><br>
+          <form action="/" method="post"><br>
+            <input type="text" class="input-text" name="x-values" placeholder="X Values" required><br><br>
+            <button type="submit" name="predict" value="predict" class="nice-buttons">Predict</button>
+          </form>
+        </div>
+
+        {% if prediction %}
+          <div class="predictions-container">
+            <h2 id="predicts">Results of Predictions:</h2>
+            <div class="prediction-result">
+              <p>The prediction for <b>"{{ session['target_column'] }}"</b> will be <b>"{{ prediction }}"</b> when the values of the columns <b>"{{ session['feature_columns'] }}"</b> are <b>"{{ session['example_values'] }}"</b> respectively.</p>
+              <p>The RMSE of this prediction was <b>"{{ rmse }}"</b>.</p>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mario David Hernández Pantoja WEB &copy; 2024</p>
+  </footer>
+</body>
+</html>
