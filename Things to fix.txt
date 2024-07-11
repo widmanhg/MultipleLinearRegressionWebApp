@@ -1,0 +1,2 @@
+- Check why the RMSE is so high.
+- Check how to connect it with MongoDB in the future.

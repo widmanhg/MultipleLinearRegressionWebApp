@@ -71,7 +71,7 @@
           <label>Write the columns required for the training<br>(Use the tables shown above to copy the column names).</label>
           <form action="/" method="post"><br>
             <input type="text" class="input-text" name="target-column" placeholder="Target Column" required><br><br>
-            <input type="text" class="input-text" name="feature-columns" placeholder="List of columns desired (e.g.,columna1,columna2)" required><br><br>
+            <input type="text" class="input-text" name="feature-columns" placeholder="List of desired columns (e.g., column1, column2)" required><br><br>
             <button type="submit" name="train" value="train" class="nice-buttons">Train</button>
           </form>
         </div>
@@ -96,7 +96,7 @@
           <h2>Predict</h2>
           <label>Press to complete the prediction</label><br>
           <form action="/" method="post"><br>
-            <input type="text" class="input-text" name="x-values" placeholder="X Values" required><br><br>
+            <input type="text" class="input-text" name="x-values" placeholder="List of example values (e.g., value X1, value X2)" required><br><br>
             <button type="submit" name="predict" value="predict" class="nice-buttons">Predict</button>
           </form>
         </div>
