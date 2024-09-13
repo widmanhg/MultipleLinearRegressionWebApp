@@ -112,7 +112,7 @@ Finally, scroll down to get to the predict section, there you'll have to write e
 
 ## Contributions
 
-Any contribution is accepted for this project we align with the MIT License for open source. If you are interested in contributing directly with us or just copy our code for an own project, you're completly free to do it. You can contact us by this email in case of doubts or contributions: [mdavidhernandezp@gmail.com](mdavidhernandezp@gmail.com).
+Any contribution is accepted for this project we align with the MIT License for open source. If you are interested in contributing directly with us or just copy our code for an own project, you're completly free to do it. You can contact us by this email in case of doubts or contributions: `mdavidhernandezp@gmail.com`.
 
 - **Steps for contributing:**
 1. Fork the project.
