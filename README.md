@@ -87,7 +87,7 @@ Defines the Docker enviroment for the Docker image of the Web App, specifying th
 
 ## Usage
 
-After succesfully have cloned the repository, and have built and run the docker compose file, you can access the Web App by going to your browser and accessing to your localhost into the port 5000 `http://localhost:5000`. Once you were there, that's it, you can use the Web App and make use of all its functions.
+After succesfully have cloned the repository, and have built and run the docker compose file, you can access the Web App by going to your browser and accessing to your localhost into the port 5000 [http://localhost:5000](http://localhost:5000). Once you were there, that's it, you can use the Web App and make use of all its functions.
 
 Also you can follow the section below for guidance if you're lost.
 
@@ -112,7 +112,7 @@ Finally, scroll down to get to the predict section, there you'll have to write e
 
 ## Contributions
 
-Any contribution is accepted for this project we align with the MIT License for open source. If you are interested in contributing directly with us or just copy our code for an own project, you're completly free to do it. You can contact us by this email in case of doubts or contributions: `mdavidhernandezp@gmail.com`.
+Any contribution is accepted for this project we align with the MIT License for open source. If you are interested in contributing directly with us or just copy our code for an own project, you're completly free to do it. You can contact us by this email in case of doubts or contributions: [mdavidhernandezp@gmail.com](mdavidhernandezp@gmail.com).
 
 - **Steps for contributing:**
 1. Fork the project.
