@@ -9,13 +9,14 @@
 
 # Dockerized Online Store Web Scraper API
 
-This project aims to create a simple web app with the objective to let the users make a prediction of their own data using a Multiple Linear Regression, this by first letting the user upload its dataset or csv, making a general cleaning of this, and then proceding let the user choose what parameteres will use for the training of the MLR Model, and finally test it by passing it values to make the prediction. All the project being inside a Dockerized Enviroment.
+This project aims to create a simple Web App with the objective of letting the users make a prediction of their own data using a Multiple Linear Regression, this by first uploading their datasets or csv files, making a general cleaning of these, and then proceding to let the user choose what parameteres they want to use for the training of the MLR Model, and finally test it by writing the values desired to make the prediction. Also, all the project it's inside a Dockerized Enviroment.
 
 ## Index
 
 - [Content Overview](#content-overview)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Guiding Steps](#guiding-steps)
 - [Contributions](#contributions)
 - [Credits](#credits)
 - [License](#license)
@@ -24,7 +25,7 @@ This project aims to create a simple web app with the objective to let the users
 
 ### 1. `app.py`
 
-The Python code that serves the web app by using `Flask`. It shows you the html templates working, and the principal page or route is `index.html` that it serves the main procees of the web app, and then it has another one called `about.html` that it's just a contact page for convention.
+The Python code that serves the Web App by using `Flask`. It shows you the html templates working, and the principal page or route is `index.html` that it serves the main procees of the web app, and then it has another one called `about.html` that it's just a contact page for convention.
 
 ### 2. `core.py`
 
@@ -88,22 +89,24 @@ Defines the Docker enviroment for the Docker image of the Web App, specifying th
 
 After succesfully have cloned the repository, and have built and run the docker compose file, you can access the Web App by going to your browser and accessing to your localhost into the port 5000 `http://localhost:5000`. Once you were there, that's it, you can use the Web App and make use of all its functions.
 
-## Guiding steps
+Also you can follow the section below for guidance if you're lost.
 
-First, you have to upload your csv or dataset, press the button to select the file from your file explorer, once the name of the file is beside that button, press the button upload to actually do it, then the Web App should refresh and show you your csv.
+## Guiding Steps
+
+First, you have to upload your csv or dataset, press the button to select the file from your file explorer, once the name of the file is beside that button, press the button `Upload` to actually do it, then the Web App should refresh and show you your csv.
 
 ![Upload Image](static/images/upload.png)
 
-Second, just scroll down to get to the clean section, here you just have to press the button clean and the process will start automatically. NOTE: The process of cleaning its kinda general so be careful with this cause the cleaner might make or remove some things from your csv that might not be exactly correct.
+Second, just scroll down to get to the clean section, here you just have to press the button `Clean` and the process will start automatically, when it finishes your cleaned csv will be shown. NOTE: The process of cleaning its kinda general so be careful with this because the cleaner might make or remove some things from your csv that might not be exactly correct.
 
 ![Clean Image](static/images/clean.png)
 
-Third, scroll down to get to the train section, into this section you'll have to write the exact target column for the prediction from your csv, and below write a column or an entire list of columns with the exact names, the trainer will use this or these for reference, once you've written the columns just hit the button Train and the training will begin, once completed the page will refresh and you could see the Prediction Coefficients.
+Third, scroll down to get to the train section, into this section you'll have to write the exact target column for the prediction from your csv, and below write a column or an entire list of columns with the exact names, the trainer will use this or these for reference, once you've written the columns just hit the button `Train` and the training will begin, once completed the page will refresh and you could see the Prediction Coefficients.
 
 ![Train Image](static/images/train.png)
 
 
-Finally, scroll down to get to the predict section, there you'll have to write example values for the columns you selected in the past phase, then hit the button predict, the page will refresh again to make the prediction and show you the result with the values and columns you selected; also the page will show you the RMSE of the result value to see how correct the prediction was.
+Finally, scroll down to get to the predict section, there you'll have to write example values for the columns you selected in the past step, then hit the button `Predict`, the page will refresh again to make the prediction and show you the result with the values and columns you selected; also the page will show you the RMSE of the result value to see how correct the prediction was.
 
 ![Predict Image](static/images/predict.png)
 
