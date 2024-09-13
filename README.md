@@ -7,7 +7,7 @@
 [![CSS](https://img.shields.io/badge/CSS-3.0-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
 [![Docker](https://img.shields.io/badge/Docker-v20.10.17-purple.svg)](https://www.docker.com/)
 
-# Dockerized Online Store Web Scraper API
+# Dockerized Multiple Liner Regression Web App
 
 This project aims to create a simple Web App with the objective of letting the users make a prediction of their own data using a Multiple Linear Regression, this by first uploading their datasets or csv files, making a general cleaning of these, and then proceding to let the user choose what parameteres they want to use for the training of the MLR Model, and finally test it by writing the values desired to make the prediction. Also, all the project it's inside a Dockerized Enviroment.
 
@@ -25,15 +25,15 @@ This project aims to create a simple Web App with the objective of letting the u
 
 ### 1. `app.py`
 
-The Python code that serves the Web App by using `Flask`. It shows you the html templates working, and the principal page or route is `index.html` that it serves the main procees of the web app, and then it has another one called `about.html` that it's just a contact page for convention.
+The Python code that serves the Web App by using `Flask`. It shows you the HTML Templates working, and the principal page or route is `index.html` that it serves the main process of the web app, and then it has another one called `about.html` that it's just a contact page for convention.
 
 ### 2. `core.py`
 
-This Python script serves all the processes that `app.py` will do, these are `cleaner` that cleans the csv passed by the user, `trainer` that accomplish the process of training a model by using the cleaned csv created in the past process and the parameteres selected by the user, and then `predicter` that uses the model created and new values passed by the user to finally make the prediction and retrive it.
+This Python script serves all the processes that `app.py` will do, these are `cleaner` that cleans the csv passed by the user, `trainer` that accomplish the process of training a model by using the cleaned csv created in the past process and the parameteres selected by the user, and then `predicter` that uses the model created and new values passed by the user to finally make the prediction and retrive it, all this using `pandas`, `numpy` and `sklearn`.
 
 ### 3. `templates/files`
 
-This folder saves all the `.html` scripts that the Python scripts will use for the web app. 
+This folder saves all the `.html` scripts that the Python codes will use for the web app. 
 
 ### 4. `static/css/files`
 
@@ -120,7 +120,6 @@ Any contribution is accepted for this project we align with the MIT License for 
 3. Commit your changes (`git commit -am 'adding new feature'`).
 4. Push the branch (`git push origin feature/new-feature`).
 5. Open a pull request.
-
 
 ## Credits
 
